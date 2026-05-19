@@ -8,6 +8,30 @@ https://github.com/1kunalsahu/complaint-system
 
 Render runs on Linux, so use `npm`, not `npm.cmd`, in Render settings.
 
+## Fastest Option: Render Blueprint
+
+The repo includes `render.yaml`, so you can deploy both services together.
+
+1. Render Dashboard > `New` > `Blueprint`
+2. Select repo: `1kunalsahu/complaint-system`
+3. Render will detect `render.yaml`
+4. Fill prompted secret values:
+   - `MONGO_URI`
+   - `CLIENT_URL`
+   - `FRONTEND_URL`
+   - `OPENROUTER_API_KEY`
+   - `VITE_API_URL`
+
+Use temporary values first if Render asks before URLs are generated:
+
+```env
+CLIENT_URL=https://complaint-system-frontend.onrender.com
+FRONTEND_URL=https://complaint-system-frontend.onrender.com
+VITE_API_URL=https://complaint-system-backend.onrender.com/api
+```
+
+After deployment, confirm the actual frontend/backend URLs in Render. If Render changes service names, update these environment variables and redeploy.
+
 ## Backend Web Service
 
 Create: `New` > `Web Service`
