@@ -201,8 +201,8 @@ git push -u origin main
 Backend as Render Web Service:
 
 - Root Directory: `backend`
-- Build Command: `npm.cmd install`
-- Start Command: `npm.cmd start`
+- Build Command: `npm install`
+- Start Command: `npm start`
 - Environment Variables:
   - `PORT=10000`
   - `MONGO_URI=your_atlas_uri`
@@ -214,7 +214,7 @@ Backend as Render Web Service:
 Frontend as Render Static Site:
 
 - Root Directory: `frontend`
-- Build Command: `npm.cmd install && npm.cmd run build`
+- Build Command: `npm install && npm run build`
 - Publish Directory: `dist`
 - Environment Variable:
   - `VITE_API_URL=https://your-backend.onrender.com/api`
