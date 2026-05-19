@@ -1,0 +1,15 @@
+{
+  "name": "smart-complaint-management-system",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI-Based Smart Complaint Management System using MERN stack and OpenRouter API.",
+  "scripts": {
+    "install:all": "npm --prefix backend install && npm --prefix frontend install",
+    "dev": "concurrently \"npm --prefix backend run dev\" \"npm --prefix frontend run dev\"",
+    "start": "npm --prefix backend start",
+    "build": "npm --prefix frontend run build"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
